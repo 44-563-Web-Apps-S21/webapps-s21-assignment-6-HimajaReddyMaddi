@@ -71,10 +71,20 @@ function processGuess(){
         out.innerHTML =  "Correct count:"+correct
     } else {
         wrong++ 
+        if(wrong>=3){
+            accountLocked();
+        }
+        else{
         alert("Access Denied")
         out.innerHTML = "Wrong count:"+wrong
+        }
     }
 }
+
+function accountLocked(){
+    alert("Account locked")
+}
+
 var currentImage=0
 function newImage(){
     out = document.getElementById("myImage")
