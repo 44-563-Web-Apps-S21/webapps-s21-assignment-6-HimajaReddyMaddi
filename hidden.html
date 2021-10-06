@@ -5,23 +5,23 @@
      
  </head>
 <body>
-    <h3>Hidden things by Himaja Reddy Maddi</h3>
+    <h3>Pass phrase by Himaja Reddy Maddi</h3>
 <h2>Getting input</h2>
 <form>
-    <label for="secretword">Enter the secret word”</label>
-    <input type="password" id="form_secret"  value="secret">
+    <label for="secretword">Enter the secret phrase</label>
+    <input type="password" id="form_secret"  value="Let me in">
     
-    <label for="guess">Enter a guess”</label>
+    <label for="guess">Enter a phrase</label>
     <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
     <br>
-    <input type="button" onclick="processGuess()" value="Check the guess">
+    <input type="button" onclick="processGuess()" value="Check the phrase">
    
 </form>
      <p id="result1">Result will be displayed</p>
 <br>
 <br>
 <div class="container">
-    <img src="C:\Users\S545156\Downloads\horse.png" id="myImage" class="img-fluid" width="200" height="200" onclick="rotateImage()"> 
+    <img src="C:\Users\S545156\Downloads\horse.png" id="myImage" class="img-fluid" width="200" height="200" onclick="newImage()"> 
     
 </div>
 
@@ -67,16 +67,16 @@ function processGuess(){
    out = document.getElementById("result1")
     if(confirmed){
         correct++
-        alert("congratulations")
+        alert("Access allowed")
         out.innerHTML =  "Correct count:"+correct
     } else {
         wrong++ 
-        alert("Sorry")
+        alert("Access Denied")
         out.innerHTML = "Wrong count:"+wrong
     }
 }
 var currentImage=0
-function rotateImage(){
+function newImage(){
     out = document.getElementById("myImage")
     switch(currentImage){
         case 0: 
